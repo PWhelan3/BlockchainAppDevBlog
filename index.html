@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e1e20 0%, #2c6a78 100%);
             min-height: 100vh;
             color: #333;
             line-height: 1.6;
@@ -26,7 +26,7 @@
         }
 
         header {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0);
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -166,10 +166,85 @@
             align-items: center;
             gap: 0.5rem;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .read-more:hover {
             transform: translateX(5px);
+        }
+
+        .post-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+
+        .post-page-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s ease;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #667eea;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 2001;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+
+        .post-page h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .post-page .post-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .post-page .post-date {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .post-page .post-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
         }
 
         .add-post-btn {
@@ -360,11 +435,10 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">BlockchainDev</div>
+            <div class="logo">BlockchainAppDev Blog & Dev Diary</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#resources">Resources</a></li>
             </ul>
         </nav>
@@ -372,42 +446,42 @@
 
     <main class="container">
         <section class="hero">
-            <h1>My Blockchain Journey</h1>
+            <h1>My BlockchainAppDev Development Documentation</h1>
             <p>Documenting the development process of my final BlockchainAppDev project - from concept to deployment</p>
         </section>
 
         <section class="blog-grid" id="blog-posts">
-            <article class="blog-post">
+            <article class="blog-post" data-post-id="1">
                 <div class="post-date">June 19, 2025</div>
                 <h2 class="post-title">Project Kickoff & Initial Planning</h2>
                 <div class="post-tags">
                     <span class="tag">Planning</span>
                     <span class="tag">Research</span>
                 </div>
-                <p class="post-excerpt">Started my BlockchainAppDev final project today! After brainstorming various ideas, I've decided to build a decentralized task management system. The goal is to create something practical that demonstrates smart contract development, frontend integration, and proper blockchain architecture.</p>
-                <a href="#" class="read-more">Read more →</a>
+                <p class="post-excerpt">Started my BlockchainAppDev final project today! After brainstorming various ideas, I've decided to build a decentralized task management system. The goal is to create something practical that demonstrates smart contract development, frontend integration, and proper blockchain architecture. I spent hours researching different project ideas and finally settled on something that would be both challenging and practical. The system will allow users to create, assign, and track tasks on the blockchain, with smart contracts handling the logic for task completion verification and reward distribution.</p>
+                <span class="read-more" onclick="openPost(1)">Read more →</span>
             </article>
 
-            <article class="blog-post">
+            <article class="blog-post" data-post-id="2">
                 <div class="post-date">June 18, 2025</div>
                 <h2 class="post-title">Technology Stack Decision</h2>
                 <div class="post-tags">
                     <span class="tag">Tech Stack</span>
                     <span class="tag">Tools</span>
                 </div>
-                <p class="post-excerpt">After researching various options, I've settled on using Solidity for smart contracts, React for the frontend, and Hardhat for development and testing. Also planning to deploy on a testnet first before considering mainnet deployment.</p>
-                <a href="#" class="read-more">Read more →</a>
+                <p class="post-excerpt">After researching various options, I've settled on using Solidity for smart contracts, React for the frontend, and Hardhat for development and testing. Also planning to deploy on a testnet first before considering mainnet deployment. The decision wasn't easy - I also considered using Truffle instead of Hardhat, but the community support and documentation for Hardhat seemed more comprehensive. For the frontend, I was torn between React and Vue.js, but React's ecosystem for blockchain development is more mature with libraries like Web3.js and Ethers.js having better React integration.</p>
+                <span class="read-more" onclick="openPost(2)">Read more →</span>
             </article>
 
-            <article class="blog-post">
+            <article class="blog-post" data-post-id="3">
                 <div class="post-date">June 17, 2025</div>
                 <h2 class="post-title">Setting Up Development Environment</h2>
                 <div class="post-tags">
                     <span class="tag">Setup</span>
                     <span class="tag">Development</span>
                 </div>
-                <p class="post-excerpt">Spent the day configuring my development environment. Installed Node.js, set up Hardhat, configured MetaMask for testing, and created the basic project structure. Ready to start coding tomorrow!</p>
-                <a href="#" class="read-more">Read more →</a>
+                <p class="post-excerpt">Spent the day configuring my development environment. Installed Node.js, set up Hardhat, configured MetaMask for testing, and created the basic project structure. Ready to start coding tomorrow! The setup process was more involved than I expected. I had to make sure all the versions were compatible, especially between Node.js and Hardhat. I also set up a local blockchain network using Hardhat's built-in network for testing. MetaMask configuration took some time as I had to add the local network and import test accounts. Created a clean folder structure separating contracts, scripts, tests, and frontend components.</p>
+                <span class="read-more" onclick="openPost(3)">Read more →</span>
             </article>
         </section>
     </main>
@@ -439,8 +513,69 @@
         </div>
     </div>
 
+    <div class="post-page" id="postPage">
+        <button class="back-btn" onclick="closePost()" title="Back to blog">←</button>
+        <div class="post-page-content">
+            <h1 id="postPageTitle"></h1>
+            <div class="post-meta">
+                <div class="post-date" id="postPageDate"></div>
+                <div class="post-tags" id="postPageTags"></div>
+            </div>
+            <div class="post-content" id="postPageContent"></div>
+        </div>
+    </div>
+
     <script>
         let posts = [];
+        let predefinedPosts = [
+            {
+                id: 1,
+                title: "Project Kickoff & Initial Planning",
+                tags: ["Planning", "Research"],
+                content: "Started my BlockchainAppDev final project today! After brainstorming various ideas, I've decided to build a decentralized task management system. The goal is to create something practical that demonstrates smart contract development, frontend integration, and proper blockchain architecture. I spent hours researching different project ideas and finally settled on something that would be both challenging and practical. The system will allow users to create, assign, and track tasks on the blockchain, with smart contracts handling the logic for task completion verification and reward distribution.",
+                date: "June 19, 2025"
+            },
+            {
+                id: 2,
+                title: "Technology Stack Decision",
+                tags: ["Tech Stack", "Tools"],
+                content: "After researching various options, I've settled on using Solidity for smart contracts, React for the frontend, and Hardhat for development and testing. Also planning to deploy on a testnet first before considering mainnet deployment. The decision wasn't easy - I also considered using Truffle instead of Hardhat, but the community support and documentation for Hardhat seemed more comprehensive. For the frontend, I was torn between React and Vue.js, but React's ecosystem for blockchain development is more mature with libraries like Web3.js and Ethers.js having better React integration.",
+                date: "June 18, 2025"
+            },
+            {
+                id: 3,
+                title: "Setting Up Development Environment",
+                tags: ["Setup", "Development"],
+                content: "Spent the day configuring my development environment. Installed Node.js, set up Hardhat, configured MetaMask for testing, and created the basic project structure. Ready to start coding tomorrow! The setup process was more involved than I expected. I had to make sure all the versions were compatible, especially between Node.js and Hardhat. I also set up a local blockchain network using Hardhat's built-in network for testing. MetaMask configuration took some time as I had to add the local network and import test accounts. Created a clean folder structure separating contracts, scripts, tests, and frontend components.",
+                date: "June 17, 2025"
+            }
+        ];
+
+        function truncateText(text, wordLimit) {
+            const words = text.split(' ');
+            if (words.length <= wordLimit) return text;
+            return words.slice(0, wordLimit).join(' ') + '...';
+        }
+
+        function openPost(postId) {
+            const post = predefinedPosts.find(p => p.id === postId) || posts.find(p => p.id === postId);
+            if (!post) return;
+            
+            document.getElementById('postPageTitle').textContent = post.title;
+            document.getElementById('postPageDate').textContent = post.date;
+            document.getElementById('postPageContent').textContent = post.content;
+            
+            const tagsHtml = post.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            document.getElementById('postPageTags').innerHTML = tagsHtml;
+            
+            document.getElementById('postPage').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePost() {
+            document.getElementById('postPage').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
 
         function openModal() {
             document.getElementById('postModal').style.display = 'block';
@@ -465,15 +600,17 @@
             const postEl = document.createElement('article');
             postEl.className = 'blog-post';
             postEl.style.animationDelay = '0.1s';
+            postEl.setAttribute('data-post-id', post.id);
             
             const tagsHtml = post.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            const truncatedContent = truncateText(post.content, 50);
             
             postEl.innerHTML = `
                 <div class="post-date">${post.date}</div>
                 <h2 class="post-title">${post.title}</h2>
                 <div class="post-tags">${tagsHtml}</div>
-                <p class="post-excerpt">${post.content}</p>
-                <a href="#" class="read-more">Read more →</a>
+                <p class="post-excerpt">${truncatedContent}</p>
+                <span class="read-more" onclick="openPost(${post.id})">Read more →</span>
             `;
             
             return postEl;
@@ -533,6 +670,23 @@
             if (e.target === this) {
                 closeModal();
             }
+        });
+
+        // Close post page when clicking outside content
+        document.getElementById('postPage').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePost();
+            }
+        });
+
+        // Update existing post excerpts to show only first 50 words
+        document.addEventListener('DOMContentLoaded', function() {
+            const postExcerpts = document.querySelectorAll('.post-excerpt');
+            postExcerpts.forEach(excerpt => {
+                const fullText = excerpt.textContent;
+                const truncatedText = truncateText(fullText, 50);
+                excerpt.textContent = truncatedText;
+            });
         });
 
         // Smooth scrolling for navigation
