@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlockchainAppDev Journey</title>
+    <title>BlockchainAppDev Blog</title>
     <style>
         * {
             margin: 0;
@@ -22,7 +22,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 15px 20px;
         }
 
         header {
@@ -39,13 +39,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            padding: 2rem 0;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #08aaa2, #4c187f);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -59,7 +59,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #555;
+            color: #ffffff;
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
@@ -68,7 +68,7 @@
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: #6ba07f;
             background: rgba(102, 126, 234, 0.1);
             transform: translateY(-2px);
         }
@@ -79,7 +79,8 @@
 
         .hero {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-top: 4rem;
+            margin-bottom: 5rem;
             animation: fadeInUp 1s ease-out;
         }
 
@@ -100,15 +101,15 @@
 
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+            gap: 3rem;
             margin-bottom: 4rem;
         }
 
         .blog-post {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
+            backdrop-filter: blur(20px);
+            border-radius: 8px;
             padding: 2rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -117,12 +118,12 @@
         }
 
         .blog-post:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .post-date {
-            color: #667eea;
+            color: #09881c;
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
@@ -150,8 +151,9 @@
         }
 
         .tag {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
+            background: white;
+            color: rgb(0, 0, 0);
+            border: 1px solid black;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.8rem;
@@ -159,7 +161,11 @@
         }
 
         .read-more {
-            color: #667eea;
+            background: white;
+            color: #1c8219;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 0.3rem 0.8rem;
             text-decoration: none;
             font-weight: 600;
             display: inline-flex;
@@ -180,7 +186,7 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e1e20 0%, #2c6a78 100%);
             z-index: 2000;
             overflow-y: auto;
         }
@@ -210,7 +216,7 @@
             height: 50px;
             cursor: pointer;
             font-size: 1.2rem;
-            color: #667eea;
+            color: #0f3d12;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             z-index: 2001;
@@ -237,7 +243,7 @@
         }
 
         .post-page .post-date {
-            color: #667eea;
+            color: #09881c;
             font-weight: 600;
         }
 
@@ -251,7 +257,7 @@
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #0c8131, #0a5b50);
             color: white;
             border: none;
             border-radius: 50%;
@@ -416,15 +422,15 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .nav-links {
                 gap: 1rem;
             }
-            
+
             .blog-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .modal-content {
                 width: 95%;
                 padding: 1.5rem;
@@ -435,9 +441,9 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">BlockchainAppDev Blog & Dev Diary</div>
+            <div class="logo">Blog & Dev Diary</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#resources">Resources</a></li>
             </ul>
@@ -446,13 +452,36 @@
 
     <main class="container">
         <section class="hero">
-            <h1>My BlockchainAppDev Development Documentation</h1>
+            <h1>My Development Documentation</h1>
             <p>Documenting the development process of my final BlockchainAppDev project - from concept to deployment</p>
         </section>
 
         <section class="blog-grid" id="blog-posts">
+
+            <!-- <article class="blog-post" data-post-id="2">
+                <div class="post-date">June 18, 2025</div>
+                <h2 class="post-title">Technology Stack Decision</h2>
+                <div class="post-tags">
+                    <span class="tag">Tech Stack</span>
+                    <span class="tag">Tools</span>
+                </div>
+                <p class="post-excerpt">After researching various options, I've settled on using Solidity for smart contracts, React for the frontend, and Hardhat for development and testing. Also planning to deploy on a testnet first before considering mainnet deployment. The decision wasn't easy - I also considered using Truffle instead of Hardhat, but the community support and documentation for Hardhat seemed more comprehensive. For the frontend, I was torn between React and Vue.js, but React's ecosystem for blockchain development is more mature with libraries like Web3.js and Ethers.js having better React integration.</p>
+                <span class="read-more" onclick="openPost(2)">Read more →</span>
+            </article>
+
+            <article class="blog-post" data-post-id="3">
+                <div class="post-date">June 17, 2025</div>
+                <h2 class="post-title">Setting Up Development Environment</h2>
+                <div class="post-tags">
+                    <span class="tag">Setup</span>
+                    <span class="tag">Development</span>
+                </div>
+                <p class="post-excerpt">Spent the day configuring my development environment. Installed Node.js, set up Hardhat, configured MetaMask for testing, and created the basic project structure. Ready to start coding tomorrow! The setup process was more involved than I expected. I had to make sure all the versions were compatible, especially between Node.js and Hardhat. I also set up a local blockchain network using Hardhat's built-in network for testing. MetaMask configuration took some time as I had to add the local network and import test accounts. Created a clean folder structure separating contracts, scripts, tests, and frontend components.</p>
+                <span class="read-more" onclick="openPost(3)">Read more →</span>
+            </article>
+
             <article class="blog-post" data-post-id="1">
-                <div class="post-date">June 19, 2025</div>
+                <div class="post-date">May 20, 2025</div>
                 <h2 class="post-title">Project Kickoff & Initial Planning</h2>
                 <div class="post-tags">
                     <span class="tag">Planning</span>
@@ -483,6 +512,34 @@
                 <p class="post-excerpt">Spent the day configuring my development environment. Installed Node.js, set up Hardhat, configured MetaMask for testing, and created the basic project structure. Ready to start coding tomorrow! The setup process was more involved than I expected. I had to make sure all the versions were compatible, especially between Node.js and Hardhat. I also set up a local blockchain network using Hardhat's built-in network for testing. MetaMask configuration took some time as I had to add the local network and import test accounts. Created a clean folder structure separating contracts, scripts, tests, and frontend components.</p>
                 <span class="read-more" onclick="openPost(3)">Read more →</span>
             </article>
+
+            <article class="blog-post" data-post-id="1">
+                <div class="post-date">May 20, 2025</div>
+                <h2 class="post-title">Project Kickoff & Initial Planning</h2>
+                <div class="post-tags">
+                    <span class="tag">Planning</span>
+                    <span class="tag">Research</span>
+                </div>
+                <p class="post-excerpt">Started my BlockchainAppDev final project today! After brainstorming various ideas, I've decided to build a decentralized task management system. The goal is to create something practical that demonstrates smart contract development, frontend integration, and proper blockchain architecture. I spent hours researching different project ideas and finally settled on something that would be both challenging and practical. The system will allow users to create, assign, and track tasks on the blockchain, with smart contracts handling the logic for task completion verification and reward distribution.</p>
+                <span class="read-more" onclick="openPost(1)">Read more →</span>
+            </article> -->
+
+            <article class="blog-post" data-post-id="1">
+                <div class="post-date">May 19, 2025</div>
+                <h2 class="post-title">First Entry!</h2>
+                <div class="post-tags">
+                    <span class="tag">Setup</span>
+                    <span class="tag">Planning</span>
+                    <span class="tag">Ideas</span>
+                </div>
+                <p class="post-excerpt">First entry! This is basically just to get the ball rolling with this project. I think the idea of documenting the whole process of development from start to finish for the Blockchain App Dev Project is really great. Not just for posterity but also to clear my thinking and understand what I am doing better. The goal with creating this blog is to log and upload entries at least once a week, but also when I encounter some issues that I am finding difficult to resolve. This is sort of like my ‘build in public’ for this project. The idea of course being that building things out in the open holds you accountable, in terms sticking to progress deadlines, and also in terms of procrastination or uncertainty. For me mapping out or writing out my thoughts is also an invaluable way to begin to organise my thoughts and think clearly. So anyway, all this to say that this is going to be my blog and diary for the duration of this final project. I will try to upload consistently to hold myself accountable, and I will also try to use this as a facility for thinking out loud when tackling the problems and hurdles of this project!
+                    <br>All the best,
+                    <br>- P
+                </p>
+                <span class="read-more" onclick="openPost(1)">Read more →</span>
+            </article>
+
+
         </section>
     </main>
 
@@ -530,24 +587,24 @@
         let predefinedPosts = [
             {
                 id: 1,
-                title: "Project Kickoff & Initial Planning",
-                tags: ["Planning", "Research"],
-                content: "Started my BlockchainAppDev final project today! After brainstorming various ideas, I've decided to build a decentralized task management system. The goal is to create something practical that demonstrates smart contract development, frontend integration, and proper blockchain architecture. I spent hours researching different project ideas and finally settled on something that would be both challenging and practical. The system will allow users to create, assign, and track tasks on the blockchain, with smart contracts handling the logic for task completion verification and reward distribution.",
-                date: "June 19, 2025"
+                title: "First Entry!",
+                tags: ["Setup", "Planning", "Ideas"],
+                content: "First entry! This is basically just to get the ball rolling with this project. I think the idea of documenting the whole process of development from start to finish for the Blockchain App Dev Project is really great. Not just for posterity but also to clear my thinking and understand what I am doing better. The goal with creating this blog is to log and upload entries at least once a week, but also when I encounter some issues that I am finding difficult to resolve. This is sort of like my ‘build in public’ for this project. The idea of course being that building things out in the open holds you accountable, in terms sticking to progress deadlines, and also in terms of procrastination or uncertainty. For me mapping out or writing out my thoughts is also an invaluable way to begin to organise my thoughts and think clearly. So anyway, all this to say that this is going to be my blog and diary for the duration of this final project. I will try to upload consistently to hold myself accountable, and I will also try to use this as a facility for thinking out loud when tackling the problems and hurdles of this project! All the best, - P",
+                date: "May 19, 2025"
             },
             {
                 id: 2,
                 title: "Technology Stack Decision",
                 tags: ["Tech Stack", "Tools"],
-                content: "After researching various options, I've settled on using Solidity for smart contracts, React for the frontend, and Hardhat for development and testing. Also planning to deploy on a testnet first before considering mainnet deployment. The decision wasn't easy - I also considered using Truffle instead of Hardhat, but the community support and documentation for Hardhat seemed more comprehensive. For the frontend, I was torn between React and Vue.js, but React's ecosystem for blockchain development is more mature with libraries like Web3.js and Ethers.js having better React integration.",
+                content: "",
                 date: "June 18, 2025"
             },
             {
                 id: 3,
-                title: "Setting Up Development Environment",
-                tags: ["Setup", "Development"],
-                content: "Spent the day configuring my development environment. Installed Node.js, set up Hardhat, configured MetaMask for testing, and created the basic project structure. Ready to start coding tomorrow! The setup process was more involved than I expected. I had to make sure all the versions were compatible, especially between Node.js and Hardhat. I also set up a local blockchain network using Hardhat's built-in network for testing. MetaMask configuration took some time as I had to add the local network and import test accounts. Created a clean folder structure separating contracts, scripts, tests, and frontend components.",
-                date: "June 17, 2025"
+                title: "First Entry!",
+                tags: ["Setup", "Planning", "Ideas"],
+                content: "First entry! This is basically just to get the ball rolling with this project. I think the idea of documenting the whole process of development from start to finish for the Blockchain App Dev Project is really great. Not just for posterity but also to clear my thinking and understand what I am doing better. The goal with creating this blog is to log and upload entries at least once a week, but also when I encounter some issues that I am finding difficult to resolve. This is sort of like my ‘build in public’ for this project. The idea of course being that building things out in the open holds you accountable, in terms sticking to progress deadlines, and also in terms of procrastination or uncertainty. For me mapping out or writing out my thoughts is also an invaluable way to begin to organise my thoughts and think clearly. So anyway, all this to say that this is going to be my blog and diary for the duration of this final project. I will try to upload consistently to hold myself accountable, and I will also try to use this as a facility for thinking out loud when tackling the problems and hurdles of this project! All the best, - P",
+                date: "May 19, 2025"
             }
         ];
 
@@ -560,14 +617,14 @@
         function openPost(postId) {
             const post = predefinedPosts.find(p => p.id === postId) || posts.find(p => p.id === postId);
             if (!post) return;
-            
+
             document.getElementById('postPageTitle').textContent = post.title;
             document.getElementById('postPageDate').textContent = post.date;
             document.getElementById('postPageContent').textContent = post.content;
-            
+
             const tagsHtml = post.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
             document.getElementById('postPageTags').innerHTML = tagsHtml;
-            
+
             document.getElementById('postPage').style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
@@ -589,10 +646,10 @@
         }
 
         function formatDate(date) {
-            return date.toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
+            return date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
             });
         }
 
@@ -601,10 +658,10 @@
             postEl.className = 'blog-post';
             postEl.style.animationDelay = '0.1s';
             postEl.setAttribute('data-post-id', post.id);
-            
+
             const tagsHtml = post.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
             const truncatedContent = truncateText(post.content, 50);
-            
+
             postEl.innerHTML = `
                 <div class="post-date">${post.date}</div>
                 <h2 class="post-title">${post.title}</h2>
@@ -612,7 +669,7 @@
                 <p class="post-excerpt">${truncatedContent}</p>
                 <span class="read-more" onclick="openPost(${post.id})">Read more →</span>
             `;
-            
+
             return postEl;
         }
 
@@ -624,17 +681,17 @@
                 content: content,
                 date: formatDate(new Date())
             };
-            
+
             posts.unshift(post);
-            
+
             const blogGrid = document.getElementById('blog-posts');
             const newPostEl = createPostElement(post);
             blogGrid.insertBefore(newPostEl, blogGrid.firstChild);
-            
+
             // Add entrance animation
             newPostEl.style.opacity = '0';
             newPostEl.style.transform = 'translateY(30px)';
-            
+
             setTimeout(() => {
                 newPostEl.style.transition = 'all 0.5s ease';
                 newPostEl.style.opacity = '1';
@@ -644,21 +701,21 @@
 
         document.getElementById('postForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const title = document.getElementById('postTitle').value;
             const tagsInput = document.getElementById('postTags').value;
             const content = document.getElementById('postContent').value;
-            
+
             const tags = tagsInput.split(',').map(tag => tag.trim()).filter(tag => tag);
-            
+
             addPost(title, tags, content);
             closeModal();
-            
+
             // Show success feedback
             const btn = document.querySelector('.add-post-btn');
             btn.innerHTML = '✓';
             btn.style.background = '#28a745';
-            
+
             setTimeout(() => {
                 btn.innerHTML = '+';
                 btn.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
