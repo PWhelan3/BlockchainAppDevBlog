@@ -441,11 +441,10 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">BlockchainDev</div>
+            <div class="logo">Blog & Dev Diary</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#resources">Resources</a></li>
             </ul>
         </nav>
@@ -453,12 +452,94 @@
 
     <main class="container">
         <section class="hero">
-            <h1>My Blockchain Journey</h1>
+            <h1>My Development Documentation</h1>
             <p>Documenting the development process of my final BlockchainAppDev project - from concept to deployment</p>
         </section>
 
         <section class="blog-grid" id="blog-posts">
-            <!-- Posts will be loaded from Firebase -->
+
+            <!-- <article class="blog-post" data-post-id="2">
+                <div class="post-date">June 18, 2025</div>
+                <h2 class="post-title">Technology Stack Decision</h2>
+                <div class="post-tags">
+                    <span class="tag">Tech Stack</span>
+                    <span class="tag">Tools</span>
+                </div>
+                <p class="post-excerpt">After researching various options, I've settled on using Solidity for smart contracts, React for the frontend, and Hardhat for development and testing. Also planning to deploy on a testnet first before considering mainnet deployment. The decision wasn't easy - I also considered using Truffle instead of Hardhat, but the community support and documentation for Hardhat seemed more comprehensive. For the frontend, I was torn between React and Vue.js, but React's ecosystem for blockchain development is more mature with libraries like Web3.js and Ethers.js having better React integration.</p>
+                <span class="read-more" onclick="openPost(2)">Read more →</span>
+            </article>
+
+            <article class="blog-post" data-post-id="3">
+                <div class="post-date">June 17, 2025</div>
+                <h2 class="post-title">Setting Up Development Environment</h2>
+                <div class="post-tags">
+                    <span class="tag">Setup</span>
+                    <span class="tag">Development</span>
+                </div>
+                <p class="post-excerpt">Spent the day configuring my development environment. Installed Node.js, set up Hardhat, configured MetaMask for testing, and created the basic project structure. Ready to start coding tomorrow! The setup process was more involved than I expected. I had to make sure all the versions were compatible, especially between Node.js and Hardhat. I also set up a local blockchain network using Hardhat's built-in network for testing. MetaMask configuration took some time as I had to add the local network and import test accounts. Created a clean folder structure separating contracts, scripts, tests, and frontend components.</p>
+                <span class="read-more" onclick="openPost(3)">Read more →</span>
+            </article>
+
+            <article class="blog-post" data-post-id="1">
+                <div class="post-date">May 20, 2025</div>
+                <h2 class="post-title">Project Kickoff & Initial Planning</h2>
+                <div class="post-tags">
+                    <span class="tag">Planning</span>
+                    <span class="tag">Research</span>
+                </div>
+                <p class="post-excerpt">Started my BlockchainAppDev final project today! After brainstorming various ideas, I've decided to build a decentralized task management system. The goal is to create something practical that demonstrates smart contract development, frontend integration, and proper blockchain architecture. I spent hours researching different project ideas and finally settled on something that would be both challenging and practical. The system will allow users to create, assign, and track tasks on the blockchain, with smart contracts handling the logic for task completion verification and reward distribution.</p>
+                <span class="read-more" onclick="openPost(1)">Read more →</span>
+            </article>
+
+            <article class="blog-post" data-post-id="2">
+                <div class="post-date">June 18, 2025</div>
+                <h2 class="post-title">Technology Stack Decision</h2>
+                <div class="post-tags">
+                    <span class="tag">Tech Stack</span>
+                    <span class="tag">Tools</span>
+                </div>
+                <p class="post-excerpt">After researching various options, I've settled on using Solidity for smart contracts, React for the frontend, and Hardhat for development and testing. Also planning to deploy on a testnet first before considering mainnet deployment. The decision wasn't easy - I also considered using Truffle instead of Hardhat, but the community support and documentation for Hardhat seemed more comprehensive. For the frontend, I was torn between React and Vue.js, but React's ecosystem for blockchain development is more mature with libraries like Web3.js and Ethers.js having better React integration.</p>
+                <span class="read-more" onclick="openPost(2)">Read more →</span>
+            </article>
+
+            <article class="blog-post" data-post-id="3">
+                <div class="post-date">June 17, 2025</div>
+                <h2 class="post-title">Setting Up Development Environment</h2>
+                <div class="post-tags">
+                    <span class="tag">Setup</span>
+                    <span class="tag">Development</span>
+                </div>
+                <p class="post-excerpt">Spent the day configuring my development environment. Installed Node.js, set up Hardhat, configured MetaMask for testing, and created the basic project structure. Ready to start coding tomorrow! The setup process was more involved than I expected. I had to make sure all the versions were compatible, especially between Node.js and Hardhat. I also set up a local blockchain network using Hardhat's built-in network for testing. MetaMask configuration took some time as I had to add the local network and import test accounts. Created a clean folder structure separating contracts, scripts, tests, and frontend components.</p>
+                <span class="read-more" onclick="openPost(3)">Read more →</span>
+            </article>
+
+            <article class="blog-post" data-post-id="1">
+                <div class="post-date">May 20, 2025</div>
+                <h2 class="post-title">Project Kickoff & Initial Planning</h2>
+                <div class="post-tags">
+                    <span class="tag">Planning</span>
+                    <span class="tag">Research</span>
+                </div>
+                <p class="post-excerpt">Started my BlockchainAppDev final project today! After brainstorming various ideas, I've decided to build a decentralized task management system. The goal is to create something practical that demonstrates smart contract development, frontend integration, and proper blockchain architecture. I spent hours researching different project ideas and finally settled on something that would be both challenging and practical. The system will allow users to create, assign, and track tasks on the blockchain, with smart contracts handling the logic for task completion verification and reward distribution.</p>
+                <span class="read-more" onclick="openPost(1)">Read more →</span>
+            </article> -->
+
+            <article class="blog-post" data-post-id="1">
+                <div class="post-date">May 19, 2025</div>
+                <h2 class="post-title">First Entry!</h2>
+                <div class="post-tags">
+                    <span class="tag">Setup</span>
+                    <span class="tag">Planning</span>
+                    <span class="tag">Ideas</span>
+                </div>
+                <p class="post-excerpt">First entry! This is basically just to get the ball rolling with this project. I think the idea of documenting the whole process of development from start to finish for the Blockchain App Dev Project is really great. Not just for posterity but also to clear my thinking and understand what I am doing better. The goal with creating this blog is to log and upload entries at least once a week, but also when I encounter some issues that I am finding difficult to resolve. This is sort of like my ‘build in public’ for this project. The idea of course being that building things out in the open holds you accountable, in terms sticking to progress deadlines, and also in terms of procrastination or uncertainty. For me mapping out or writing out my thoughts is also an invaluable way to begin to organise my thoughts and think clearly. So anyway, all this to say that this is going to be my blog and diary for the duration of this final project. I will try to upload consistently to hold myself accountable, and I will also try to use this as a facility for thinking out loud when tackling the problems and hurdles of this project!
+                    <br>All the best,
+                    <br>- P
+                </p>
+                <span class="read-more" onclick="openPost(1)">Read more →</span>
+            </article>
+
+
         </section>
     </main>
 
@@ -501,12 +582,12 @@
         </div>
     </div>
 
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-
     <script>
         // Firebase Configuration
+
+
+        import { initializeApp } from "firebase/app";
+
         const firebaseConfig = {
             apiKey: "AIzaSyC_IrxVR0JGyNVnM2X5Alz8pq2NWskPs04",
             authDomain: "blockchainappdevblog.firebaseapp.com",
@@ -514,7 +595,7 @@
             storageBucket: "blockchainappdevblog.firebasestorage.app",
             messagingSenderId: "1051903480215",
             appId: "1:1051903480215:web:2e7e63c6c185b7992074d2"
-            };
+        };
 
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
@@ -550,13 +631,13 @@
             try {
                 const querySnapshot = await db.collection('posts').orderBy('timestamp', 'desc').get();
                 const blogGrid = document.getElementById('blog-posts');
-                
+
                 querySnapshot.forEach((doc) => {
                     const post = { id: doc.id, ...doc.data() };
                     const postEl = createPostElement(post);
                     blogGrid.appendChild(postEl);
                 });
-                
+
                 console.log('Posts loaded from Firebase');
             } catch (error) {
                 console.error('Error loading posts:', error);
@@ -570,7 +651,7 @@
             const blogGrid = document.getElementById('blog-posts');
             // Clear existing posts
             blogGrid.innerHTML = '';
-            
+
             predefinedPosts.forEach(post => {
                 const postEl = createPostElement(post);
                 blogGrid.appendChild(postEl);
@@ -587,7 +668,7 @@
                     date: formatDate(new Date()),
                     timestamp: firebase.firestore.FieldValue.serverTimestamp()
                 });
-                
+
                 console.log('Post saved with ID:', docRef.id);
                 return docRef.id;
             } catch (error) {
@@ -601,7 +682,7 @@
             // First check predefined posts
             const predefinedPost = predefinedPosts.find(p => p.id === postId);
             if (predefinedPost) return predefinedPost;
-            
+
             // Then check Firebase
             try {
                 const doc = await db.collection('posts').doc(postId).get();
@@ -611,7 +692,7 @@
             } catch (error) {
                 console.error('Error getting post:', error);
             }
-            
+
             return null;
         }
 
@@ -624,14 +705,14 @@
         function openPost(postId) {
             getPost(postId).then(post => {
                 if (!post) return;
-                
+
                 document.getElementById('postPageTitle').textContent = post.title;
                 document.getElementById('postPageDate').textContent = post.date;
                 document.getElementById('postPageContent').textContent = post.content;
-                
+
                 const tagsHtml = post.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
                 document.getElementById('postPageTags').innerHTML = tagsHtml;
-                
+
                 document.getElementById('postPage').style.display = 'block';
                 document.body.style.overflow = 'hidden';
             });
@@ -654,10 +735,10 @@
         }
 
         function formatDate(date) {
-            return date.toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
+            return date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
             });
         }
 
@@ -666,10 +747,10 @@
             postEl.className = 'blog-post';
             postEl.style.animationDelay = '0.1s';
             postEl.setAttribute('data-post-id', post.id);
-            
+
             const tagsHtml = post.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
             const truncatedContent = truncateText(post.content, 50);
-            
+
             postEl.innerHTML = `
                 <div class="post-date">${post.date}</div>
                 <h2 class="post-title">${post.title}</h2>
@@ -677,7 +758,7 @@
                 <p class="post-excerpt">${truncatedContent}</p>
                 <span class="read-more" onclick="openPost(${post.id})">Read more →</span>
             `;
-            
+
             return postEl;
         }
 
@@ -689,17 +770,17 @@
                 content: content,
                 date: formatDate(new Date())
             };
-            
+
             posts.unshift(post);
-            
+
             const blogGrid = document.getElementById('blog-posts');
             const newPostEl = createPostElement(post);
             blogGrid.insertBefore(newPostEl, blogGrid.firstChild);
-            
+
             // Add entrance animation
             newPostEl.style.opacity = '0';
             newPostEl.style.transform = 'translateY(30px)';
-            
+
             setTimeout(() => {
                 newPostEl.style.transition = 'all 0.5s ease';
                 newPostEl.style.opacity = '1';
@@ -714,10 +795,10 @@
                 const btn = document.querySelector('.add-post-btn');
                 btn.innerHTML = '⏳';
                 btn.disabled = true;
-                
+
                 // Save to Firebase
                 const postId = await savePostToFirebase(title, tags, content);
-                
+
                 // Create post object with Firebase ID
                 const post = {
                     id: postId,
@@ -726,59 +807,59 @@
                     content: content,
                     date: formatDate(new Date())
                 };
-                
+
                 // Add to UI
                 const blogGrid = document.getElementById('blog-posts');
                 const newPostEl = createPostElement(post);
                 blogGrid.insertBefore(newPostEl, blogGrid.firstChild);
-                
+
                 // Add entrance animation
                 newPostEl.style.opacity = '0';
                 newPostEl.style.transform = 'translateY(30px)';
-                
+
                 setTimeout(() => {
                     newPostEl.style.transition = 'all 0.5s ease';
                     newPostEl.style.opacity = '1';
                     newPostEl.style.transform = 'translateY(0)';
                 }, 100);
-                
+
                 // Show success state
                 btn.innerHTML = '✓';
                 btn.style.background = '#28a745';
-                
+
                 setTimeout(() => {
                     btn.innerHTML = '+';
                     btn.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
                     btn.disabled = false;
                 }, 2000);
-                
+
             } catch (error) {
                 console.error('Error adding post:', error);
-                
+
                 // Show error state
                 const btn = document.querySelector('.add-post-btn');
                 btn.innerHTML = '❌';
                 btn.style.background = '#dc3545';
-                
+
                 setTimeout(() => {
                     btn.innerHTML = '+';
                     btn.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
                     btn.disabled = false;
                 }, 2000);
-                
+
                 alert('Error saving post. Please try again.');
             }
         }
 
         document.getElementById('postForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const title = document.getElementById('postTitle').value;
             const tagsInput = document.getElementById('postTags').value;
             const content = document.getElementById('postContent').value;
-            
+
             const tags = tagsInput.split(',').map(tag => tag.trim()).filter(tag => tag);
-            
+
             // Use Firebase-enabled function
             addPostWithFirebase(title, tags, content);
             closeModal();
@@ -802,7 +883,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Load posts from Firebase when page loads
             loadPosts();
-            
+
             const postExcerpts = document.querySelectorAll('.post-excerpt');
             postExcerpts.forEach(excerpt => {
                 const fullText = excerpt.textContent;
