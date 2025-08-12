@@ -523,18 +523,46 @@
         let posts = [];
         let predefinedPosts = [
             {
-                id: 1,
-                title: "Project Kickoff & Initial Planning",
-                tags: ["Planning", "Research"],
-                content: "Started my BlockchainAppDev final project today! After brainstorming various ideas, I've decided to build a decentralized task management system. The goal is to create something practical that demonstrates smart contract development, frontend integration, and proper blockchain architecture. I spent hours researching different project ideas and finally settled on something that would be both challenging and practical. The system will allow users to create, assign, and track tasks on the blockchain, with smart contracts handling the logic for task completion verification and reward distribution.",
-                date: "June 19, 2025"
+                id: 9,
+                title: "",
+                tags: ["Setup", "Development"],
+                content: "",
+                date: "June , 2025"
             },
             {
-                id: 2,
-                title: "Technology Stack Decision",
-                tags: ["Tech Stack", "Tools"],
-                content: "After researching various options, I've settled on using Solidity for smart contracts, React for the frontend, and Hardhat for development and testing. Also planning to deploy on a testnet first before considering mainnet deployment. The decision wasn't easy - I also considered using Truffle instead of Hardhat, but the community support and documentation for Hardhat seemed more comprehensive. For the frontend, I was torn between React and Vue.js, but React's ecosystem for blockchain development is more mature with libraries like Web3.js and Ethers.js having better React integration.",
-                date: "June 18, 2025"
+                id: 8,
+                title: "",
+                tags: ["Setup", "Development"],
+                content: "",
+                date: "June , 2025"
+            },
+            {
+                id: 7,
+                title: "",
+                tags: ["Setup", "Development"],
+                content: "",
+                date: "June , 2025"
+            },
+            {
+                id: 6,
+                title: "",
+                tags: ["Setup", "Development"],
+                content: "",
+                date: "June , 2025"
+            },
+            {
+                id: 5,
+                title: "",
+                tags: ["Setup", "Development"],
+                content: "",
+                date: "June , 2025"
+            },
+            {
+                id: 4,
+                title: "",
+                tags: ["Setup", "Development"],
+                content: "",
+                date: "June , 2025"
             },
             {
                 id: 3,
@@ -542,6 +570,20 @@
                 tags: ["Setup", "Development"],
                 content: "Spent the day configuring my development environment. Installed Node.js, set up Hardhat, configured MetaMask for testing, and created the basic project structure. Ready to start coding tomorrow! The setup process was more involved than I expected. I had to make sure all the versions were compatible, especially between Node.js and Hardhat. I also set up a local blockchain network using Hardhat's built-in network for testing. MetaMask configuration took some time as I had to add the local network and import test accounts. Created a clean folder structure separating contracts, scripts, tests, and frontend components.",
                 date: "June 17, 2025"
+            },
+            {
+                id: 2,
+                title: "Technology Stack Decision",
+                tags: ["Tech Stack", "Tools"],
+                content: "After researching various options, I've settled on using Solidity for smart contracts, React for the frontend, and Hardhat for development and testing. Also planning to deploy on a testnet first before considering mainnet deployment. The decision wasn't easy - I also considered using Truffle instead of Hardhat, but the community support and documentation for Hardhat seemed more comprehensive. For the frontend, I was torn between React and Vue.js, but React's ecosystem for blockchain development is more mature with libraries like Web3.js and Ethers.js having better React integration.",
+                date: "June 7th, 2025"
+            },
+            {
+                id: 1,
+                title: "Project Kickoff & Initial Planning",
+                tags: ["Planning", "Research"],
+                content: "Started my BlockchainAppDev final project today! After brainstorming various ideas, I've decided to build a decentralized task management system. The goal is to create something practical that demonstrates smart contract development, frontend integration, and proper blockchain architecture. I spent hours researching different project ideas and finally settled on something that would be both challenging and practical. The system will allow users to create, assign, and track tasks on the blockchain, with smart contracts handling the logic for task completion verification and reward distribution.",
+                date: "June 4th, 2025"
             }
         ];
 
@@ -707,10 +749,10 @@
             }, 100);
         }
 
-        // Enhanced addPost function with Firebase integration
+        // addPost function with Firebase integration
         async function addPostWithFirebase(title, tags, content) {
             try {
-                // Show loading state
+                // loading state
                 const btn = document.querySelector('.add-post-btn');
                 btn.innerHTML = '⏳';
                 btn.disabled = true;
@@ -755,7 +797,7 @@
             } catch (error) {
                 console.error('Error adding post:', error);
                 
-                // Show error state
+                // error state
                 const btn = document.querySelector('.add-post-btn');
                 btn.innerHTML = '❌';
                 btn.style.background = '#dc3545';
@@ -779,7 +821,7 @@
             
             const tags = tagsInput.split(',').map(tag => tag.trim()).filter(tag => tag);
             
-            // Use Firebase-enabled function
+            // Firebase-enabled function
             addPostWithFirebase(title, tags, content);
             closeModal();
         });
